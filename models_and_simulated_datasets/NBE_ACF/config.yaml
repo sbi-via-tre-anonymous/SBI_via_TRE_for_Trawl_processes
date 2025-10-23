@@ -1,0 +1,60 @@
+learn_config:
+  learn_acf: true
+  learn_both: false
+  learn_marginal: false
+loss_config:
+  nr_acf_lags: 35
+  num_KL_samples: 5000
+  p: 2
+  use_acf_directly: true
+  use_kl_div: true
+model_config:
+  dropout_rate: 0.025
+  final_output_size: 2
+  linear_layer_sizes:
+  - 64
+  - 32
+  - 16
+  - 8
+  lstm_hidden_size: 128
+  mean_aggregation: true
+  model_name: LSTMModel
+  num_lstm_layers: 2
+  with_theta: false
+optimizer:
+  lr: 0.0025
+  name: adam
+  weight_decay: 1.0e-05
+prng_key: 37399
+train_config:
+  n_iterations: 15001
+trawl_config:
+  acf: sup_IG
+  acf_prior_hyperparams:
+    distr_name: uniform
+    eta_prior_hyperparams:
+    - 10.0
+    - 20.0
+    gamma_prior_hyperparams:
+    - 10.0
+    - 20.0
+  batch_size: 64
+  marginal_distr: NIG
+  marginal_distr_hyperparams:
+    beta_prior_hyperparams:
+    - -5.0
+    - 5.0
+    distr_name: uniform
+    loc_prior_hyperparams:
+    - -1.0
+    - 1.0
+    scale_prior_hyperparams:
+    - 0.5
+    - 1.5
+  seq_len: 1500
+  tau: 1.0
+  theta_size: 5
+  trawl_process_type: sup_ig_nig_5p
+val_config:
+  val_freq: 500
+  val_n_batches: 40

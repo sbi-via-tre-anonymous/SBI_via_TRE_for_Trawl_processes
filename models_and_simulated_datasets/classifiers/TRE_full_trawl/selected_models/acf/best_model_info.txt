@@ -1,0 +1,2 @@
+Best model iteration: 37000
+Best validation loss: 0.394522
