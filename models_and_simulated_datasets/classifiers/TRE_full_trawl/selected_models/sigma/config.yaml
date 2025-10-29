@@ -1,0 +1,65 @@
+model_config:
+  dropout_rate: 0.05
+  final_output_size: 1
+  increased_size: 16
+  linear_layer_sizes:
+  - 128
+  - 48
+  - 32
+  - 15
+  - 8
+  - 4
+  - 2
+  lstm_hidden_size: 128
+  mean_aggregation: true
+  model_name: VariableLSTMModel
+  num_lstm_layers: 2
+optimizer:
+  alpha: 0.005
+  lr: 0.0005
+  name: adam
+prng_key: 83601
+train_config:
+  n_iterations: 40001
+trawl_config:
+  acf: sup_IG
+  acf_prior_hyperparams:
+    distr_name: uniform
+    eta_prior_hyperparams:
+    - 10.0
+    - 20.0
+    gamma_prior_hyperparams:
+    - 10.0
+    - 20.0
+  batch_size: 64
+  input_size: 5
+  marginal_distr: NIG
+  marginal_distr_hyperparams:
+    beta_prior_hyperparams:
+    - -5.0
+    - 5.0
+    distr_name: uniform
+    loc_prior_hyperparams:
+    - -1.0
+    - 1.0
+    scale_prior_hyperparams:
+    - 0.5
+    - 1.5
+  num_seq_lens: 20
+  seq_len: 1500
+  seq_len_bounds:
+  - 1500
+  - 3500
+  tau: 1.0
+  theta_size: 5
+  trawl_process_type: sup_ig_nig_5p
+  variable_seq_len: false
+tre_config:
+  nlags: 35
+  replace_full_trawl_with_acf: true
+  tre_type: sigma
+  use_summary_statistics: false
+  use_tre: true
+val_config:
+  val_freq: 750
+  val_n_batches: 40

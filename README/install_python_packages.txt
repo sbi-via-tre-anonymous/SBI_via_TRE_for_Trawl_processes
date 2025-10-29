@@ -1,0 +1,8 @@
+### Workstation environment installation code ###
+
+# Check Python version requirement
+type python_version.txt #Python 3.10.11
+# Install this python version from the web
+py -3.10 -m venv sbi_paper_env
+pip install -r requirements.txt
+#################################################

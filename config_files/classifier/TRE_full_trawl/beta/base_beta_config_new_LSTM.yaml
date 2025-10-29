@@ -1,0 +1,46 @@
+prng_key: 2135161
+tre_config:
+  use_tre: True
+  tre_type: beta 
+  use_summary_statistics: False
+  replace_full_trawl_with_acf: True
+  nlags: 35
+trawl_config:
+  tau: 1.0
+  seq_len: 2500
+  seq_len_bounds: [2500, 3500]
+  variable_seq_len: False
+  num_seq_lens: 20
+  input_size: 5
+  theta_size: 5
+  batch_size: 64
+  marginal_distr: NIG
+  acf: sup_IG
+  trawl_process_type: sup_ig_nig_5p
+  acf_prior_hyperparams:
+    distr_name: uniform
+    gamma_prior_hyperparams: [10.,20.]
+    eta_prior_hyperparams: [10.,20.]   
+  marginal_distr_hyperparams:
+    distr_name: uniform 
+    loc_prior_hyperparams: [-1.,1.]
+    scale_prior_hyperparams: [0.5,1.5]
+    beta_prior_hyperparams: [-5.,5.] 
+model_config:
+  model_name: VariableLSTMModel
+  lstm_hidden_size: 32
+  num_lstm_layers: 1
+  linear_layer_sizes: [16,8,4]
+  mean_aggregation: False
+  final_output_size: 1
+  dropout_rate: 0.105
+  with_theta: True
+train_config:
+  n_iterations: 40001 
+val_config:
+  val_freq: 750
+  val_n_batches: 40
+optimizer:
+  name: adam
+  lr: 0.0015
+  alpha: 0.005

@@ -1,0 +1,2 @@
+Windows workstation: Python 3.10.11
+GPU:                 Python 3.10.16
