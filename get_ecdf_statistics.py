@@ -141,6 +141,6 @@ if __name__ == '__main__':
     path_to_save = os.path.join(os.getcwd(), #'models_and_simulated_datasets', 'classifiers', 'TRE_full_trawl',
                                 #'selected_models', 'per_classifier_coverage_check',
                                 #'tre_classifiers_calibration_comparison.pdf'
-                                'src','visualisations','Figure4_bottom.pdf')
+                                'src','visualisations','Figure3_bottom.pdf')
     plt.savefig(path_to_save, bbox_inches='tight', pad_inches=0.05, dpi=900)
     plt.show()

@@ -13,6 +13,6 @@ def setup_sys_path():
         script_path = Path(os.getcwd()).resolve()
 
     # Adjust level based on folder structure
-    project_root = script_path.parents[2]  # Two levels up to the project root
+    project_root = script_path.parent  # Two levels up to the project root # repackaging the repo seems to crash the Figure 5 and Table 3 script, removing the [2] fixes that; to watch out in case other imports crash
     if str(project_root) not in sys.path:
         sys.path.append(str(project_root))

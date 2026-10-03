@@ -133,7 +133,7 @@ if __name__ == '__main__':
     fig.suptitle('Coverage Comparison for NRE and TRE', fontsize=14)
 
     path_to_save = os.path.join(os.getcwd(), 'src', 'visualisations',
-                                'Figure4_top.pdf'
+                                'Figure3_top.pdf'
                                 #'models_and_simulated_datasets', 'classifiers',
                                 #'coverage_check_ranks_NRE_and_TRE',
                                 #'calibration_comparison.pdf'
