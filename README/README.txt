@@ -73,7 +73,7 @@ TRE metrics. The latter are produced by validatet_BCE_S_B_metrtics_for_TRE_and_N
 
 Data is downloaded and made available in application_pre_processing_Figure4\all_years_at_once_electricity_data.csv.It can be downloaded again by running application_pre_processing_Figure4\get_electricity_data_all_years_at_once.py  This script requires an access key from https://www.eia.gov/opendata/.
 
-Then application_pre_processing_Figure4\MSTL_script.py creates and populates the folder application_pre_processing_Figure4\MSTL_results_14 and saves Figure4.pdf in src\visualisations. Finally, application_Figure5_and_Table3.py uses the MSTL output, produces and saves Figure5.pdf and Table3.csv in src\visualisations. This runs fast, even without a GPU.
+Then application_pre_processing_Figure4\OLS_script.py creates and populates the folder application_pre_processing_Figure4\all_respondents_OLS.csv and saves Figure4.pdf in src\visualisations. Finally, application_Figure5_and_Table3.py uses the OLS output, produces and saves Figure5.pdf and Table3.csv in src\visualisations. This runs fast, even without a GPU.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
